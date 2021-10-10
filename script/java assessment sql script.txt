@@ -1,0 +1,7 @@
+CREATE TABLE book (
+  id INT NOT NULL IDENTITY PRIMARY KEY,
+  name VARCHAR(45) NOT NULL,
+  status VARCHAR(45) NOT NULL,
+  created_date DATETIME NOT NULL,
+  modified_date DATETIME NOT NULL
+)

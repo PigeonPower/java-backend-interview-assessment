@@ -1,6 +1,5 @@
 package interview.assessment.service;
 
-import interview.assessment.controller.BookController;
 import interview.assessment.enums.BookStatus;
 import interview.assessment.repository.BookRepository;
 import org.apache.logging.log4j.LogManager;
@@ -11,8 +10,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import interview.assessment.controller.model.BookRequest;
 import interview.assessment.entity.Book;

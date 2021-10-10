@@ -1,7 +1,5 @@
 package interview.assessment.controller;
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import interview.assessment.service.BookService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import interview.assessment.controller.model.BookRequest;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping(value = {"/book"})
@@ -22,7 +22,7 @@ public class BookController {
     Logger logger = LogManager.getLogger(BookController.class);
 
     @PostMapping
-    public ResponseEntity bookCreation(@RequestBody BookRequest bookRequest) {
+    public ResponseEntity bookCreation(@Valid @RequestBody BookRequest bookRequest) {
         logger.debug("Start Book Creation");
         logger.debug("Book Request : {}", bookRequest);
 
@@ -45,7 +45,7 @@ public class BookController {
     }
 
     @PutMapping
-    public ResponseEntity bookUpdate(@RequestParam(name = "id") int id, @RequestBody BookRequest bookRequest) {
+    public ResponseEntity bookUpdate(@RequestParam(name = "id") int id, @Valid @RequestBody BookRequest bookRequest) {
         logger.debug("Start Book Update");
         logger.debug("Book Id : {}", id);
         logger.debug("Book Request : {}", bookRequest);
