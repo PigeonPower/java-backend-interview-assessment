@@ -46,6 +46,36 @@
 			"response": []
 		},
 		{
+			"name": "http://localhost:8080/book/list?pageNo=0&pageSize=10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/list?pageNo=0&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"list"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:8080/book",
 			"request": {
 				"method": "POST",
